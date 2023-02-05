@@ -1,4 +1,4 @@
 FROM maven:3-eclipse-temurin-8
 
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh && bash /tmp/nodesource_setup.sh && apt-get install -y nodejs && curl -sL https://aka.ms/InstallAzureCLIDeb | bash && npm i -g azure-functions-core-tools@4 --unsafe-perm true && echo "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1" >> ~/.bashrc
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh && bash /tmp/nodesource_setup.sh && apt-get install -y nodejs && curl -sL https://aka.ms/InstallAzureCLIDeb | bash && npm i -g azure-functions-core-tools@4 --unsafe-perm true && echo "export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1" >> ~/.bashrc && source ~/.bashrc
 
