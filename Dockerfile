@@ -4,4 +4,4 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh
 
 RUN git clone https://github.com/HtetLinMaung/sequelize-java.git && cd sequelize-java && mvn clean package && mvn install && cd .. && rm -rf sequelize-java
 
-RUN echo "export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1" >> ~/.bashrc && source ~/.bashrc
+RUN echo "export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1" >> ~/.bashrc
